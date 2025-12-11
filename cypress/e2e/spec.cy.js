@@ -6,14 +6,6 @@ describe('Cenário 1 — Teste de Login com Sucesso', () => {
     cy.get('[data-test="login-button"]').click()  
     cy.get('[data-test="title"]').contains('Products')
   })
-  it('Login com falha', () => {
-      cy.visit('https://www.saucedemo.com/')
-      cy.get('[data-test="username"]').type('standard_user')
-      cy.get('[data-test="password"]').type('secret')
-      cy.get('[data-test="login-button"]').click()  
-
-      cy.get('[data-test="error"]').should('be.visible').and('contain', 'Epic sadface: Username and password do not match any user in this service')
-    })
 })
 describe('Cenário 2 — Teste de Login com Falha', () => {
   it('Login com falha', () => {
